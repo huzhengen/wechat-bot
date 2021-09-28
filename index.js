@@ -63,9 +63,9 @@ async function onMessage(msg) {
       console.log('外卖')
       await delay(2000);
       await contact.say('饿了么外卖优惠券');
-      const fileBox1 = FileBox.fromUrl('./static/wx-eleme1.jpg')
+      const fileBox1 = FileBox.fromUrl('https://huzhengen.github.io/static/images/wx-eleme1.jpg')
       await contact.say(fileBox1)
-      const fileBox2 = FileBox.fromUrl('./static/wx-eleme2.jpg')
+      const fileBox2 = FileBox.fromUrl('https://huzhengen.github.io/static/images/wx-eleme2.jpg')
       await contact.say(fileBox2)
     } else if (content.substr(0, 1) == '?' || content.substr(0, 1) == '？') {
       let contactContent = content.replace('?', '').replace('？', '');
