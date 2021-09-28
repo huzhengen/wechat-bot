@@ -1,5 +1,7 @@
 ## Fork from https://github.com/leochen-g/wechatBot
 
+以下为原文，docker 镜像不是本项目的镜像。
+
 ## 微信每日说
 
 [![node version](https://img.shields.io/badge/node-%3E%3D12-blue.svg)](http://nodejs.cn/download/)
