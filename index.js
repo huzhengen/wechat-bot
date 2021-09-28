@@ -71,7 +71,7 @@ async function onMessage(msg) {
       const fileBox2 = FileBox.fromFile('./static/wx-eleme2.jpg')
       await contact.say(fileBox2)
       await delay(2000);
-      const fileBoxMeituan = FileBox.fromFile('./static/wx-meituan.jpg')
+      const fileBoxMeituan = FileBox.fromFile('./static/wx-meituan1.jpg')
       await contact.say(fileBoxMeituan)
     } else if (content.substr(0, 1) == '?' || content.substr(0, 1) == '？') {
       let contactContent = content.replace('?', '').replace('？', '');
