@@ -59,16 +59,20 @@ async function onMessage(msg) {
   } else if (isText) {
     // 如果非群消息 目前只处理文字消息
     console.log(`发消息人: ${alias} 消息内容: ${content}`);
-    if (content.includes('外卖') || content.includes('饿了么')) {
+    if (content.includes('外卖') || content.includes('饿了么') || content.includes('美团')) {
       console.log('fromFile')
       await delay(2000);
-      await contact.say('饿了么外卖优惠券');
+      await contact.say('饿了么/美团外卖优惠券');
+      await delay(2000);
       // const fileBox1 = FileBox.fromUrl('https://huzhengen.github.io/static/images/wx-eleme1.jpg')
       const fileBox1 = FileBox.fromFile('./static/wx-eleme1.jpg')
       await contact.say(fileBox1)
-      // const fileBox2 = FileBox.fromUrl('https://huzhengen.github.io/static/images/wx-eleme2.jpg')
+      await delay(2000);
       const fileBox2 = FileBox.fromFile('./static/wx-eleme2.jpg')
       await contact.say(fileBox2)
+      await delay(2000);
+      const fileBoxMeituan = FileBox.fromFile('./static/wx-meituan.jpg')
+      await contact.say(fileBoxMeituan)
     } else if (content.substr(0, 1) == '?' || content.substr(0, 1) == '？') {
       let contactContent = content.replace('?', '').replace('？', '');
       if (contactContent) {
